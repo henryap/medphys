@@ -3,77 +3,57 @@ $(document).ready(function(){
     $( "input#header-search-field" ).focus(function() {
         if(this.value=='Search Our Site'){this.value=''}
      });
-    
+
     $( "input#header-search-field" ).blur(function() {
         if(this.value==''){this.value='Search Our Site'}
      });
 
-    
-   //form clearing for apply page forms
-    $( "input#fname" ).focus(function() {
-        if(this.value=='First Name*' || this.value=='Please enter your first name.'){this.value=''}
-     });
-    
-    $( "input#fname" ).blur(function() {
-        if(this.value==''){this.value='First Name*'}
-     });
-    
-    $( "input#lname" ).focus(function() {
-        if(this.value=='Last Name*' || this.value=='Please enter your last name.'){this.value=''}
-     });    
-    
-    $( "input#lname" ).blur(function() {
-        if(this.value==''){this.value='Last Name*'}
-     });  
-    
-    $( "input#email" ).focus(function() {
-        if(this.value=='Email*' || this.value=='Please enter a valid email address.'){this.value=''}
-     });
-    
-    $( "input#email" ).blur(function() {
-        if(this.value==''){this.value='Email*'}
-     });   
-    
-    $( "input#phone" ).focus(function() {
-        if(this.value=='Phone' || this.value=='Please enter a valid phone number.'){this.value=''}
-     });  
-    
-    $( "input#phone" ).blur(function() {
-        if(this.value==''){this.value='Phone'}
-     });  
-    
-    //form clearing for apply page forms
+   /*----------------------------------------------------*
+    * Form clearing for Apply, Banner, and Modal forms   *
+    *----------------------------------------------------*/
+
+    /*These target the phone input in the Banner and Modal form. */
+   $( ".banner-form-div input.phone" ).focus(function() {
+       if(this.value=='Phone' || this.value=='Please enter a valid phone number.'){this.value=''}
+    });
+
+   $( ".banner-form-div input.phone" ).blur(function() {
+       if(this.value==''){this.value='Phone'}
+    });
+
+    /*these target the inputs on all forms (Apply, Banner, and Modal).
+      Except for the phone input for Banner and Modal forms.*/
     $( ".fname" ).focus(function() {
         if(this.value=='First Name*' || this.value=='Please enter your first name.'){this.value=''}
      });
-    
+
     $( ".fname" ).blur(function() {
         if(this.value==''){this.value='First Name*'}
      });
-    
+
     $( ".lname" ).focus(function() {
         if(this.value=='Last Name*' || this.value=='Please enter your last name.'){this.value=''}
-     });    
-    
+     });
+
     $( ".lname" ).blur(function() {
         if(this.value==''){this.value='Last Name*'}
-     });  
-    
+     });
+
     $( ".email" ).focus(function() {
         if(this.value=='Email*' || this.value=='Please enter a valid email address.'){this.value=''}
      });
-    
+
     $( ".email" ).blur(function() {
         if(this.value==''){this.value='Email*'}
-     });   
-    
+     });
+
     $( ".phone" ).focus(function() {
         if(this.value=='Phone*' || this.value=='Please enter a valid phone number.'){this.value=''}
-     });  
-    
+     });
+
     $( ".phone" ).blur(function() {
-        if(this.value==''){this.value='Phone*'}  
-     });  
+        if(this.value==''){this.value='Phone*'}
+     });
 
 });
 
@@ -105,8 +85,3 @@ $(document).ready(function(){
     atswp();
   }
 });
-
-
-
-
-     
